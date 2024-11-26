@@ -1,0 +1,32 @@
+body {
+  background-color: rgb(247, 236, 222);
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #ededed;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.main-sec h1 {
+  border-bottom: 2px red dotted;
+  padding-bottom: 20px;
+
+  font-family: "Pacifico", cursive;
+}
+.main-sec h2 {
+  color: #212529;
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+
+  margin-block: 50px;
+  display: inline-block;
+}
+
+.main-sec h2::before,
+.main-sec h2::after {
+  content: "\f02e";
+  font-family: "Font Awesome 6 Free";
+}

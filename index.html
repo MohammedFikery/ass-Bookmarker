@@ -1,0 +1,109 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Link to Font Awesome icons library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Link to Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Link to custom CSS for additional styling -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="main-sec">
+        <div
+          class="container  bg-opacity-75 p-2 rounded-4 my-2 text-center"
+        >
+          <!-- Section Title -->
+          <h1>Bookmarker</h1>
+          <h2>Bookmark your favorite sites</h2>
+
+          <!-- Product Name Input Field -->
+          <div class="form-floating mb-3">
+            <input
+              oninput="validationBookmarksName()"
+              type="text"
+              class="form-control"
+              id="BookmarksName"
+              placeholder=" "
+            />
+            <label for="BookmarksName">BookmarksName</label>
+            <p
+              id="msgName"
+              class="alert alert-danger p-1 small w-100 mt-2 d-none"
+            >
+              It must consist of letters, numbers, and spaces only, with a
+              length between 1 and 50 characters.
+            </p>
+          </div>
+
+          <!-- Product Price Input Field -->
+          <div class="form-floating mb-3">
+            <input
+              oninput="validationSiteURL()"
+              type="email"
+              class="form-control"
+              id="SiteURL"
+              placeholder=" "
+            />
+            <label for="SiteURL">SiteURL</label>
+            <p
+              id="msgUrl"
+              class="alert alert-danger p-1 small w-100 mt-2 d-none"
+            >
+              Invalid URL! Please enter a valid web address. .)
+            </p>
+          </div>
+          <!-- Action Buttons: Add and Update Product -->
+          <div>
+            <button
+              onclick="addProduct()"
+              id="btnSubmit"
+              class="btn btn-danger btn-sm"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="pb-4">
+        <div class="container">
+          <!-- Search Input Field -->
+          <input
+            oninput="ShowData()"
+            id="searchInput"
+            type="search"
+            class="form-control w-50 mx-auto"
+            placeholder="Search By Name...."
+          />
+
+          <!-- Product Display Area -->
+          <div>
+            <table class="table mt-4 text-center bg-light">
+              <thead>
+                <th class="text-capitalize">index</th>
+                <th class="text-capitalize">Website Name</th>
+                <th class="text-capitalize">Visit</th>
+                <th class="text-capitalize">Delete</th>
+              </thead>
+              <tbody id="tableContent"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Link to external JavaScript file for functionality -->
+    <script src="js/index.js"></script>
+  </body>
+</html>
